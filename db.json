@@ -1,34 +1,9 @@
 {
-  "notes": [
-    {
-      "id": 1,
-      "body": "Todays Agenda\n\n- Walk Dog\n- Feed fish\n- Play basketball\n- Eat a salad",
-      "updated": "2023-11-06T02:23:15.295Z"
-    },
-    {
-      "id": 10,
-      "body": "\n",
-      "updated": "2023-11-06T02:31:29.557Z"
-    },
-    {
-      "body": "pierwsza",
-      "updated": "2023-11-06T02:53:52.243Z",
-      "id": 11
-    },
-    {
-      "body": "druga",
-      "updated": "2023-11-06T02:53:56.464Z",
-      "id": 12
-    },
-    {
-      "body": "druga",
-      "updated": "2023-11-06T02:53:57.220Z",
-      "id": 13
-    },
-    {
-      "body": "HEJ",
-      "updated": "2023-11-06T02:54:42.026Z",
-      "id": 14
-    }
-  ]
+	"notes": [
+		{
+			"id": 1,
+			"body": "Todays Agenda\n\n- Walk Dog\n- Feed fish\n- Play basketball\n- Eat a salad",
+			"updated": "2023-11-06T02:23:15.295Z"
+		}
+	]
 }
