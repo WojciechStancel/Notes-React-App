@@ -9,12 +9,24 @@ const Note = () => {
 
 	useEffect(() => {
 		const getNote = async () => {
+			if (id === "new") return;
 			const res = await fetch(`http://localhost:5000/notes/${id}`);
 			const data = await res.json();
 			setNote(data);
 		};
 		getNote();
 	}, [id]);
+
+	const createNote = async () => {
+		await fetch(`http://localhost:5000/notes/`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ ...note, updated: new Date() }),
+		});
+		setRedirecting(true);
+	};
 
 	const updateNote = async () => {
 		await fetch(`http://localhost:5000/notes/${id}`, {
@@ -37,7 +49,13 @@ const Note = () => {
 	};
 
 	const handleSubmit = () => {
-		updateNote();
+		if (id !== "new" && !note.body) {
+			deleteNote();
+		} else if (id !== "new") {
+			updateNote();
+		} else if (id === "new" && note !== null) {
+			createNote();
+		}
 	};
 
 	if (isRedirecting) {
@@ -52,7 +70,11 @@ const Note = () => {
 						<ArrowLeft onClick={handleSubmit} />
 					</Link>
 				</h3>
-				<button onClick={deleteNote}>Delete</button>
+				{id !== "new" ? (
+					<button onClick={deleteNote}>Delete</button>
+				) : (
+					<button onClick={handleSubmit}>Done</button>
+				)}
 			</div>
 
 			<textarea
