@@ -1,22 +1,20 @@
-
 import { useEffect, useState } from "react";
 import ListItem from "../components/ListItem";
 import "./NotesPage.css";
 
 const NotesPage = () => {
+	const [notes, setNotes] = useState([]);
 
-    const [notes, setNotes] = useState([])
+	useEffect(() => {
+		getNotes();
+	}, []);
 
-    useEffect(() => {
-        getNotes()
-    }, [])
+	const getNotes = async () => {
+		const response = await fetch("http://localhost:5000/notes");
+		const data = await response.json();
 
-    const getNotes = async () => {
-        const response = await fetch('http://localhost:5000/notes')
-        const data = await response.json()
-
-        setNotes(data)
-    }
+		setNotes(data);
+	};
 
 	return (
 		<div className="notes">
