@@ -1,10 +1,20 @@
 import { Link, useParams } from "react-router-dom";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
-import notes from "../assets/data";
+import { useEffect, useState } from "react";
 
 const Note = () => {
 	const { id } = useParams();
-	const note = notes.find((note) => note.id === parseInt(id));
+	const [note, setNote] = useState(null);
+
+	useEffect(() => {
+		getNote();
+	}, [parseInt(id)]);
+
+	const getNote = async () => {
+		const res = await fetch(`http://localhost:5000/notes/${id}`);
+		const data = await res.json();
+		setNote(data);
+	};
 
 	return (
 		<div className="note">
