@@ -19,7 +19,7 @@ You may also see any lint errors in the console.
 Runs the json server in development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
-# With those two commands above You have complete fullstack app with CRUD functionality.
+## With those two commands above You have complete fullstack app with CRUD functionality ⬆️
 
 
 ### `npm run build`
