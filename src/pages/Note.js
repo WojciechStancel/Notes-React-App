@@ -19,6 +19,10 @@ const Note = () => {
 		getNote();
 	}, [id]);
 
+	useEffect(() => {
+		document.querySelector('textarea').focus();
+	}, []);
+
 	const createNote = async () => {
 		try {
 			await fetch(`${REACT_APP_DB_URL}/notes.json`, {
@@ -97,9 +101,7 @@ const Note = () => {
 			</div>
 
 			<textarea
-				onChange={(e) => {
-					setNote({ ...note, body: e.target.value });
-				}}
+				onChange={(e) => setNote({ ...note, body: e.target.value })}
 				value={note?.body}></textarea>
 		</div>
 	);
