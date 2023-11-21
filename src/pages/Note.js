@@ -2,49 +2,68 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { useEffect, useState } from "react";
 
+const { REACT_APP_DB_URL } = process.env;
+
 const Note = () => {
 	const { id } = useParams();
 	const [note, setNote] = useState(null);
 	const [isRedirecting, setRedirecting] = useState(false);
-
 	useEffect(() => {
 		const getNote = async () => {
 			if (id === "new") return;
-			const res = await fetch(`http://localhost:5000/notes/${id}`);
+			const res = await fetch(`${REACT_APP_DB_URL}/notes/${id}.json`);
 			const data = await res.json();
+			console.log(data);
 			setNote(data);
 		};
 		getNote();
 	}, [id]);
 
 	const createNote = async () => {
-		await fetch(`http://localhost:5000/notes/`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ ...note, updated: new Date() }),
-		});
-		setRedirecting(true);
+		try {
+			await fetch(`${REACT_APP_DB_URL}/notes.json`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify({
+					...note,
+					updated: new Date(),
+				}),
+			});
+			setRedirecting(true);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	const updateNote = async () => {
-		await fetch(`http://localhost:5000/notes/${id}`, {
-			method: "PUT",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ ...note, updated: new Date() }),
-		});
+		try {
+			await fetch(`${REACT_APP_DB_URL}/notes/${id}.json`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ ...note, updated: new Date() }),
+			});
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	const deleteNote = async () => {
-		await fetch(`http://localhost:5000/notes/${id}`, {
-			method: "DELETE",
-			headers: {
-				"Content-type": "application/json",
-			},
-		});
+		try {
+			await fetch(`${REACT_APP_DB_URL}/notes/${id}.json`, {
+				method: "DELETE",
+				headers: {
+					"Content-type": "application/json",
+				},
+			});
+		} catch (error) {
+			console.log(error);
+		}
+
 		setRedirecting(true);
 	};
 
