@@ -13,7 +13,7 @@ const Note = () => {
 			if (id === "new") return;
 			const res = await fetch(`${REACT_APP_DB_URL}/notes/${id}.json`);
 			const data = await res.json();
-			console.log(data);
+
 			setNote(data);
 		};
 		getNote();
