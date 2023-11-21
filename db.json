@@ -1,14 +1,9 @@
 {
-  "notes": [
-    {
-      "id": 1,
-      "body": "Todays Agenda\n\n- Walk Dog\n- Feed fish\n- Play basketball\n- Eat a salad",
-      "updated": "2023-11-06T02:23:15.295Z"
-    },
-    {
-      "body": "Learn React! \n",
-      "updated": "2023-11-06T23:21:53.271Z",
-      "id": 2
-    }
-  ]
+	"notes": [
+		{
+			"id": 1,
+			"body": "Todays Agenda\n\n- Run 5km \n- Buy milk\n- Meeting with Olek\n- Learn React",
+			"updated": "2023-11-06T02:23:15.295Z"
+		}
+	]
 }
