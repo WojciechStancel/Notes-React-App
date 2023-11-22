@@ -27,6 +27,28 @@
 
 </p>
 
+## Notes App is a simple application that lets you write down the things that are important to you. 
+
+
+## Main Functions
+
+### 1. **Firebase Database Integration**
+- There is no auth option, so all notes are in one database without splitting them up for different users. This feature will be implemented in the next step.
+
+### 2. **Theme Customization**
+   - Enjoy a personalized experience with the ability to switch between light and dark themes.
+
+### 3. **Add Note**
+   - Effortlessly add new notes with a simple and intuitive interface.
+
+### 4. **Change Note**
+   - Edit and update your notes easily.
+
+### 5. **Delete Note**
+   - Maintain a clutter-free and organized collection of notes by easily deleting what you no longer need.
+
+---
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
