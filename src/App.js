@@ -7,7 +7,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	function handleColorModeToggle() {
 		setIsDarkMode((prevMode) => !prevMode);
@@ -15,9 +15,12 @@ function App() {
 
 	return (
 		<Router>
-			<div className={`container ${isDarkMode ? "dark" : ""}`}>
+			<div className={`container ${isDarkMode ? "dark" : "light"}`}>
 				<div className="app">
-					<Header onColorModeToggle={handleColorModeToggle} isDarkMode={isDarkMode} />
+					<Header
+						onColorModeToggle={handleColorModeToggle}
+						isDarkMode={isDarkMode}
+					/>
 					<Routes>
 						<Route path="/" element={<NotesPage />} />
 						<Route path="/note/:id" element={<Note />} />

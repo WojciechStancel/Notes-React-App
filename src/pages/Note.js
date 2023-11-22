@@ -20,7 +20,7 @@ const Note = () => {
 	}, [id]);
 
 	useEffect(() => {
-		document.querySelector('textarea').focus();
+		document.querySelector("textarea").focus();
 	}, []);
 
 	const createNote = async () => {
@@ -85,18 +85,23 @@ const Note = () => {
 		return <Navigate to={"/"} />;
 	}
 
+
 	return (
 		<div className="note">
 			<div className="note-header">
 				<h3>
 					<Link to={"/"}>
-						<ArrowLeft onClick={handleSubmit} />
+						{id !== 'new' ? (
+							<button onClick={handleSubmit}>Save changes</button>
+						) : (
+							<ArrowLeft />
+						)}
 					</Link>
 				</h3>
 				{id !== "new" ? (
 					<button onClick={deleteNote}>Delete</button>
 				) : (
-					<button onClick={handleSubmit}>Done</button>
+					<button onClick={handleSubmit}>Add</button>
 				)}
 			</div>
 

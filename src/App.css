@@ -9,7 +9,7 @@
 	--color-light: #acb4bd;
 	--color-lighter: #f9f9f9;
 	--color-white: #ececec;
-	--color-border: #e0e3e6;
+	--color-border: #e0e3e6da;
 }
 
 .dark {
@@ -20,7 +20,7 @@
 	--color-bg: #1f2124;
 	--color-lighter: #292a2c;
 	--color-white: #2e3235;
-	--color-border: #252629;
+	--color-border: #252629cc;
 }
 
 /* BASE STYLES */
@@ -69,6 +69,10 @@ a {
 	position: absolute;
 }
 
+.container.light::before {
+	background-color: rgba(0, 0, 0, 0.55);
+}
+
 .app {
 	width: 100%;
 	max-width: 480px;
@@ -93,7 +97,6 @@ a {
 	color: var(--color-dark);
 	font-weight: 800;
 	text-align: center;
-
 }
 
 .app-header button {
