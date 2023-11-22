@@ -9,7 +9,7 @@
 	--color-light: #acb4bd;
 	--color-lighter: #f9f9f9;
 	--color-white: #ececec;
-	--color-border: #e0e3e6da;
+	--color-border: rgba(9, 1, 1, 0.076);
 }
 
 .dark {
@@ -20,10 +20,8 @@
 	--color-bg: #1f2124;
 	--color-lighter: #292a2c;
 	--color-white: #2e3235;
-	--color-border: #252629cc;
+	--color-border: #4b4c4e40;
 }
-
-/* BASE STYLES */
 
 * {
 	margin: 0;
@@ -140,7 +138,7 @@ a {
 	margin: 16px 0;
 	height: 70vh;
 	overflow-y: auto;
-	scrollbar-width: none; /* Firefox */
+	scrollbar-width: none;
 }
 
 .notes-list::-webkit-scrollbar {
@@ -195,10 +193,6 @@ a {
 .floating-button > svg {
 	fill: var(--color-bg);
 }
-
-/*==============================
-=>  Note Styles
-================================*/
 
 .note-header {
 	display: flex;
