@@ -13,7 +13,7 @@
 }
 
 .dark {
-	--color-main: #f68657;
+	--color-main: #c5b967;
 	--color-text: #d6d1d1;
 	--color-dark: #f5f6f7;
 	--color-gray: #999;
@@ -65,7 +65,7 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.85);
 	position: absolute;
 }
 
@@ -75,7 +75,8 @@ a {
 	height: 88vh;
 	margin: 0 auto;
 	background-color: var(--color-white);
-	box-shadow: 2px 2px 6px var(--color-dark);
+	box-shadow: 0px 1px 4px var(--color-dark);
+	border-radius: 8px;
 	position: relative;
 }
 
@@ -102,7 +103,6 @@ a {
 }
 
 .app-header button > img {
-	fill: var(--color-dark);
 	height: 30px;
 	width: 30px;
 	object-fit: cover;

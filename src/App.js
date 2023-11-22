@@ -17,7 +17,7 @@ function App() {
 		<Router>
 			<div className={`container ${isDarkMode ? "dark" : ""}`}>
 				<div className="app">
-					<Header onColorModeToggle={handleColorModeToggle} />
+					<Header onColorModeToggle={handleColorModeToggle} isDarkMode={isDarkMode} />
 					<Routes>
 						<Route path="/" element={<NotesPage />} />
 						<Route path="/note/:id" element={<Note />} />
