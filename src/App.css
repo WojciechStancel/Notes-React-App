@@ -206,6 +206,7 @@ a {
 	justify-content: space-between;
 	color: var(--color-main);
 	padding: 10px;
+	line-height: 10px;
 }
 
 .note-header h3 {
