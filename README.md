@@ -1,4 +1,33 @@
-# Getting Started with Create React App
+----
+
+<h2 align="center">
+<strong><a href="https://your-notes-react-app.netlify.app/">CHECK OUT THIS APP LIVE ON NETLIFY
+</a></strong>
+</h2>
+
+----
+
+<p align="center">
+
+<a href="http://unlicense.org/">
+<img src="https://img.shields.io/badge/license-Unlicense-blue.svg" alt="License: Unlicense">
+</a>
+
+<a href="https://github.com/WojciechStancel/Notes-React-App/issues">
+<img src="https://img.shields.io/github/issues/WojciechStancel/Notes-React-App.svg" alt="Issues">
+</a>
+
+<a href="https://github.com/WojciechStancel/Notes-React-App/fork">
+<img src="https://img.shields.io/github/forks/WojciechStancel/Notes-React-App.svg" alt="Forks">
+</a>
+
+<a href="https://github.com/WojciechStancel/Notes-React-App/stargazers">
+<img src="https://img.shields.io/github/stars/WojciechStancel/Notes-React-App.svg" alt="Stars">
+</a>
+
+</p>
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,14 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run server`
-
-Runs the json server in development mode.\
-Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
-
-### ⬆️ With those two commands above You have complete fullstack app with CRUD functionality ⬆️
-
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -30,36 +51,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> My Website 💻 [CodeCr8ive.pl](https://www.codecr8ive.pl) &nbsp;&middot;&nbsp;
+> GitHub
+ [![image](https://github.com/WojciechStancel/Notes-React-App/assets/121879383/fc63de6c-91ae-4eb7-ac97-a5a365bdf073)](https://github.com/WojciechStancel) &nbsp;&middot;&nbsp;
+> Do not hesitate to contact me
+ [Linkedin ![image](https://github.com/WojciechStancel/Notes-React-App/assets/121879383/94d42b30-025f-4997-9ff5-9491c49d9026)](https://www.linkedin.com/in/wojciech-stancel/) 
