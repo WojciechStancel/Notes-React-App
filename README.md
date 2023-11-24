@@ -1,7 +1,7 @@
 ----
 
 <h2 align="center">
-<strong><a href="https://your-notes-react-app.netlify.app/">CHECK OUT THIS APP LIVE ON NETLIFY
+<strong><a href="https://your-notes-react-app.netlify.app/">Click here to check app live on Netlify!
 </a></strong>
 </h2>
 
@@ -78,7 +78,7 @@ Your app is ready to be deployed!
 ---
 
 > My Website 💻 [CodeCr8ive.pl](https://www.codecr8ive.pl) &nbsp;&middot;&nbsp;
-> My GitHub account
+> My account on
 [Github <img width="20px" src="https://github.com/WojciechStancel/Notes-React-App/assets/121879383/fc63de6c-91ae-4eb7-ac97-a5a365bdf073)">](https://github.com/WojciechStancel) &nbsp;&middot;&nbsp;
 > Find me on
  [Linkedin <img width="20px" src="https://github.com/WojciechStancel/Notes-React-App/assets/121879383/94d42b30-025f-4997-9ff5-9491c49d9026">](https://www.linkedin.com/in/wojciech-stancel/) 
