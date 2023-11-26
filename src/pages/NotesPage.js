@@ -10,7 +10,7 @@ const NotesPage = () => {
 
 	useEffect(() => {
 		getNotes();
-	}, [notes]);
+	}, []);
 
 	const getNotes = async () => {
 		try {
