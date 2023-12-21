@@ -7,13 +7,14 @@ const { REACT_APP_DB_URL } = process.env;
 const Note = () => {
 	const { id } = useParams();
 	const [note, setNote] = useState(null);
+	// const [notesList, setNotesList] = useState([]);
 	const [isRedirecting, setRedirecting] = useState(false);
+
 	useEffect(() => {
 		const getNote = async () => {
 			if (id === "new") return;
 			const res = await fetch(`${REACT_APP_DB_URL}/notes/${id}.json`);
 			const data = await res.json();
-
 			setNote(data);
 		};
 		getNote();
@@ -51,6 +52,7 @@ const Note = () => {
 				},
 				body: JSON.stringify({ ...note, updated: new Date() }),
 			});
+
 		} catch (error) {
 			console.log(error);
 		}
@@ -85,13 +87,12 @@ const Note = () => {
 		return <Navigate to={"/"} />;
 	}
 
-
 	return (
 		<div className="note">
 			<div className="note-header">
 				<h3>
 					<Link to={"/"}>
-						{id !== 'new' ? (
+						{id !== "new" ? (
 							<button onClick={handleSubmit}>Save changes</button>
 						) : (
 							<ArrowLeft />

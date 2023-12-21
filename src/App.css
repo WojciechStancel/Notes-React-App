@@ -73,7 +73,7 @@ a {
 
 .app {
 	width: 100%;
-	max-width: 480px;
+	max-width: 470px;
 	height: 88vh;
 	margin: 0 auto;
 	background-color: var(--color-white);
@@ -243,4 +243,11 @@ a {
 
 .note textarea::-webkit-scrollbar {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	.app {
+		max-width: 340px;
+		overflow: hidden;
+	}
 }
