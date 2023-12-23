@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 
 const { REACT_APP_DB_URL } = process.env;
 
-const Note = () => {
+const Note = ({ setNotesList }) => {
 	const { id } = useParams();
 	const [note, setNote] = useState(null);
-	// const [notesList, setNotesList] = useState([]);
 	const [isRedirecting, setRedirecting] = useState(false);
 
 	useEffect(() => {
@@ -52,7 +51,7 @@ const Note = () => {
 				},
 				body: JSON.stringify({ ...note, updated: new Date() }),
 			});
-
+			setNotesList((prevNote) => ({ ...prevNote, updated: new Date() }));
 		} catch (error) {
 			console.log(error);
 		}

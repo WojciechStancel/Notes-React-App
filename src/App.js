@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function App() {
 	const [isDarkMode, setIsDarkMode] = useState(true);
+	const [notesList, setNotesList] = useState(null);
 
 	function handleColorModeToggle() {
 		setIsDarkMode((prevMode) => !prevMode);
@@ -22,8 +23,8 @@ function App() {
 						isDarkMode={isDarkMode}
 					/>
 					<Routes>
-						<Route path="/" element={<NotesPage />} />
-						<Route path="/note/:id" element={<Note />} />
+						<Route path="/" element={<NotesPage notesList={notesList}/>} />
+						<Route path="/note/:id" element={<Note setNotesList={setNotesList} />} />
 					</Routes>
 				</div>
 			</div>

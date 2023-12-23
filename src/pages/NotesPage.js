@@ -3,20 +3,18 @@ import ListItem from "../components/ListItem";
 import "./NotesPage.css";
 import AddButton from "../components/AddButton";
 
-const {REACT_APP_DB_URL} = process.env
+const { REACT_APP_DB_URL } = process.env;
 
-const NotesPage = () => {
+const NotesPage = ({notesList}) => {
 	const [notes, setNotes] = useState(null);
 
 	useEffect(() => {
 		getNotes();
-	}, []);
+	}, [notesList]);
 
 	const getNotes = async () => {
 		try {
-			const response = await fetch(
-				`${REACT_APP_DB_URL}/notes.json`
-			);
+			const response = await fetch(`${REACT_APP_DB_URL}/notes.json`);
 			const data = await response.json();
 			if (data && typeof data === "object") {
 				const listFromResponse = Object.entries(data).map(([id, body]) => ({
